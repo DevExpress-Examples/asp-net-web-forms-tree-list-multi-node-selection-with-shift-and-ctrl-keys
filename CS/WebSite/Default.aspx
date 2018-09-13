@@ -1,11 +1,15 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
-<%@ Register Assembly="DevExpress.Web.ASPxTreeList.v13.1" Namespace="DevExpress.Web.ASPxTreeList" TagPrefix="dx" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<%@ Register Assembly="DevExpress.Web.ASPxTreeList.v17.2, Version=17.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTreeList" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v17.2, Version=17.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<title>Example</title>
+<title>Multi-node selection with Shift and Ctrl keys</title>
+
 <script type="text/javascript">
-/*<[CDATA[*/
 var __dxLastSelectedKey = null;
 function tree_NodeClick(s, e) {
 	var isShift = e.htmlEvent.shiftKey;
@@ -35,9 +39,8 @@ function tree_NodeClick(s, e) {
 	}
 	__dxLastSelectedKey = e.nodeKey;
 	if(isShift || isCtrl) 
-		_aspxClearSelection();
+		ASPxClientUtils.ClearSelection();
 }
-/*]]>*/
 </script>
 </head>
 
@@ -57,15 +60,5 @@ function tree_NodeClick(s, e) {
 			SelectCommand="SELECT [ID], [ParentID], [Subject], [From], [Date] FROM [Threads]">
 		</asp:AccessDataSource>
     </form>
-<script type="text/javascript">
-/*<[CDATA[*/
-// Add this script at the bottom of the page for versions 8.2 before 8.2.4
-ASPxClientTreeList.prototype.___OnNodeSelectingCore = ASPxClientTreeList.prototype.OnNodeSelectingCore;
-ASPxClientTreeList.prototype.OnNodeSelectingCore = function(key) {	
-	var arg = this.StartEdit && !key.tagName ? this.FindSelectionCheck(this.GetRowByNodeKey(key)) : key;
-	this.___OnNodeSelectingCore(arg);
-};
-/*]]>*/
-</script>
 </body>
 </html>
