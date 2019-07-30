@@ -1,6 +1,6 @@
 # Multi-node selection with Shift and Ctrl keys
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e445)**
+**[[Run Online]](https://codecentral.devexpress.com/e445/)**
 <!-- run online end -->
 
 
