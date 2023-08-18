@@ -10,7 +10,7 @@
 This examples shows how to implement the multiple node selection feature. The following user operations are available:
 
 * **Ctrl+Click**  
-  Hold down the Ctrl key and click a row to add/remove the row to/from selection.
+  Hold down the Ctrl key and click a row to add/remove that row to/from selection.
 * **Shift+Click**  
   Click the first row in a range, hold down the Shift key, and click the last row in the range to select a range of rows.
 
