@@ -4,9 +4,6 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 # Tree List for ASP.NET Web Forms - How to implement multi-node selection with Shift and Ctrl keys
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128548904/)**
-<!-- run online end -->
 
 This examples shows how to implement the multiple node selection feature. The following user operations are available:
 
